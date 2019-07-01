@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+@font-face {
+    font-family: 'Fonte-logo';
+    src: url(../fonts/bubblegum-sans-regular.otf);
+}
+
+/*CABEÇALHO MOBILE*/
+/*-----------------------------------------------------------------------------------*/
+
+.cabecalho-site {
+    background: url(../img/glass-logo-min.jpg) no-repeat .5em 4.2em;
+    height: 100px;
+}
+
+.titulos-abertura {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em .5em;
+    margin-bottom: 1em;
+}
+
+.titulo-principal {
+    font-family: 'Fonte-logo', Helvetica, sans-serif;
+    font-size: 2em;
+    color: #606060;
+    text-shadow: .05em .05em .1em rgba(0, 0, 0, .6);
+}
+
+.subtitulo-principal {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1em;
+    color: #888888;
+}
+
+.imagem-titulo-desktop {
+    display: none;
+}
+
+.menu-navegacao {
+    background-image: linear-gradient(to bottom, #cccaca, #f1eeee);
+    padding: .5em;
+}
+
+.menu-link {
+    width: 100%;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: .1em .1em .2em rgba(0, 0, 0, .7);
+}
+
+.menu-item::after {
+    content: '\272A';
+    font-size: 1.5em;
+    padding-right: 1em;
+    color: #606060;
+    text-shadow: none;
+}
+
+.menu-item {
+    display: flex;
+    border: .05em solid #ffffff;
+    border-radius: 3%;
+    padding: .5em;
+    justify-content: space-between;
+}
+
+/*-----------------------------------------------------------------------------------*/
