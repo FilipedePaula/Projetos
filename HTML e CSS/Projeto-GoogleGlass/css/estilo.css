@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+@font-face {
+    font-family: 'Fonte-logo';
+    src: url(../fonts/bubblegum-sans-regular.otf);
+}
+
+/*CABEÇALHO BASE*/
+/*-----------------------------------------------------------------------------------*/
+
+.cabecalho-site {
+    background: url(../img/glass-logo-min.jpg) no-repeat .5em 5em;
+    height: 150px;
+}
+
+.titulo-principal {
+    font-family: 'Fonte-logo', Helvetica, sans-serif;
+    font-size: 2.5em;
+    color: #606060;
+    text-shadow: .05em .05em .1em rgba(0, 0, 0, .6);
+}
+
+.subtitulo-principal {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.25em;
+    color: #888888;
+}
+
+.menu-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: .1em .1em .2em rgba(0, 0, 0, .7);
+}
