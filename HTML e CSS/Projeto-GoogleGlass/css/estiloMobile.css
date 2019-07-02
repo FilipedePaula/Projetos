@@ -1,6 +1,6 @@
 /* Geral */
 /*-----------------------------------------------------------------------------------*/
-@media (max-width: 320px) {
+@media (max-width: 340px) {
 
     .interface {
         font-size: 80%;
@@ -15,6 +15,21 @@
     justify-content: space-between;
     padding: 1em .5em;
     margin-bottom: 1em;
+}
+
+.cabecalho-site {
+    background: url(../img/glass-logo-min.jpg) no-repeat .5em 5em;
+}
+
+.titulo-cabecalho,
+.titulo-principal {
+    text-shadow: .05em .05em .05em rgba(0, 0, 0, .6);
+}
+
+.menu-link {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: .1em .1em .2em rgba(0, 0, 0, .7);
 }
 
 .imagem-titulo-desktop {
@@ -42,7 +57,17 @@
     justify-content: space-between;
 }
 
-/*-----------------------------------------------------------------------------------*/
+.tabela-artigo {
+    margin: 1em 0;
+}
 
-/* Cabeçalho - Corpo*/
-/*-----------------------------------------------------------------------------------*/
+.legenda-foto {
+    display: none;
+}
+
+.imagem {
+    width: 100%;
+    border: .7em solid #ffffff;
+    box-shadow: 0 0 .05em #606060;
+    margin: 2em 0;
+}

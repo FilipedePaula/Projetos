@@ -8,34 +8,27 @@
 /* Cabeçalho */
 /*-----------------------------------------------------------------------------------*/
 
-.cabecalho-site {
-    background: url(../img/glass-logo-min.jpg) no-repeat .5em 5em;
-}
-
 .titulo-cabecalho,
 .titulo-principal {
     font-family: 'Fonte-logo', Helvetica, sans-serif;
     color: #606060;
-    text-shadow: .05em .05em .05em rgba(0, 0, 0, .6);
-}
-
-.titulo-cabecalho {
     font-size: 2.5em;
 }
 
 .subtitulo-cabecalho,
 .legenda-tabela {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 1.25em;
     color: #888888;
+    font-weight: bold;
+}
+
+.menu-item {
+    font-family: sans-serif;
+    text-transform: uppercase;
 }
 
 .menu-link {
-    text-transform: uppercase;
     text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    text-shadow: .1em .1em .2em rgba(0, 0, 0, .7);
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -44,15 +37,16 @@
 /*-----------------------------------------------------------------------------------*/
 
 .principal {
-    margin: .5em;
+    margin: 0 .3em;
 }
 
 .breadcrumbs,
 .data,
 .data-tabela {
-    font-size: .6em;
+    font-size: .8em;
     color: #606060;
     font-weight: bold;
+    margin-top: 1em;
 }
 
 .breadcrumbs {
@@ -85,7 +79,7 @@
     font-size: 1.2em;
     color: #606060;
     font-weight: bold;
-    margin: 1em 0;
+    margin-bottom: 1em;
     background-color: #dddddd;
     padding: .2em .5em;
 }
@@ -107,8 +101,9 @@
 }
 
 .enfase-artigo {
+    font-size: 110%;
     font-weight: bolder;
-    color: #4d4d4d;
+    color: #000000;
 }
 
 .link-artigo {
@@ -116,13 +111,6 @@
     font-weight: 600;
     color: #b9740c;
     cursor: pointer;
-}
-
-.imagem-artigo {
-    width: 100%;
-    border: .7em solid #ffffff;
-    box-shadow: 0 0 .05em #606060;
-    margin: 2em 0;
 }
 
 .video-artigo {
@@ -189,4 +177,11 @@
     padding: .2em .5em;
     font-weight: bold;
     margin: 1em 0;
+}
+
+.rodape {
+    padding: 1em 0;
+    text-align: center;
+    clear: both;
+    border-top: 1px solid #606060;
 }
