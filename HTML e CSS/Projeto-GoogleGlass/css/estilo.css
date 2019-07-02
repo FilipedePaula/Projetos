@@ -23,7 +23,8 @@
     font-size: 2.5em;
 }
 
-.subtitulo-cabecalho {
+.subtitulo-cabecalho,
+.legenda-tabela {
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.25em;
     color: #888888;
@@ -47,8 +48,9 @@
 }
 
 .breadcrumbs,
-.data {
-    font-size: .7em;
+.data,
+.data-tabela {
+    font-size: .6em;
     color: #606060;
     font-weight: bold;
 }
@@ -88,10 +90,20 @@
     padding: .2em .5em;
 }
 
+.titulo-diferente {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    font-weight: bold;
+    margin: 1em 0;
+    padding: .2em .5em;
+}
+
 .paragrafo-artigo {
     text-align: justify;
     text-indent: 2em;
     line-height: 1.4em;
+    margin-bottom: 2em;
 }
 
 .enfase-artigo {
@@ -104,4 +116,54 @@
     font-weight: 600;
     color: #b9740c;
     cursor: pointer;
+}
+
+.imagem-artigo {
+    width: 100%;
+    border: .7em solid #ffffff;
+    box-shadow: 0 0 .05em #606060;
+    margin: 2em 0;
+}
+
+.video-artigo {
+    width: 100%;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+/* Tabela Artígo */
+/*-----------------------------------------------------------------------------------*/
+
+.tabela-artigo {
+    width: 100%;
+}
+
+.legenda-tabela {
+    text-align: left;
+    margin-bottom: .2em;
+}
+
+.data-tabela {
+    text-align: right;
+    margin-left: 1.9em;
+}
+
+.ce,
+.cd {
+    border: .1em solid #606060;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1em;
+    padding: .5em 0;
+}
+
+.ce {
+    background-color: #606060;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.cd {
+    background-color: #cecece;
 }
