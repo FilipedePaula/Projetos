@@ -1,0 +1,48 @@
+.corpo-detalhes {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+.paragrafo-frame {
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.frames {
+    margin-bottom: 20em;
+}
+
+.titulo-frame {
+    font-size: 15pt;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 5px;
+    margin: 0px;
+}
+
+.subtitulo-frame {
+    font-size: 13pt;
+    color: #888888;
+    margin: 0px;
+}
+
+.img-dir {
+    display: block;
+    float: right;
+    margin-left: 5px;
+}
+
+.imagem-detalhes {
+    margin-bottom: 1em;
+}
+
+#topo {
+    display: none;
+}
+
+@media(width: 50ch) {
+
+    #topo {
+        display: block;
+    }
+}
