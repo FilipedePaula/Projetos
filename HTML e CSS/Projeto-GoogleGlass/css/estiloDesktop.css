@@ -88,18 +88,11 @@
 /* Artigo */
 /*-----------------------------------------------------------------------------------*/
 
-.principal {
-    display: block;
-    width: 55%;
-    float: left;
-    border-right: .06em solid #606060;
-    padding-right: 1em;
-}
-
-.outras-noticias {
-    display: block;
-    width: 40%;
-    float: right;
+.titulo-legenda {
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
 }
 
 .imagem-artigo {
@@ -108,18 +101,6 @@
     border: 8px solid #ffffff;
     box-shadow: 1px 1px 4px #000000;
     margin: 2em 0;
-}
-
-.imagem {
-    width: 100%;
-    height: 100%;
-}
-
-.titulo-legenda {
-    color: #606060;
-    background-color: #dddddd;
-    padding: 5px 0px 5px 10px;
-    margin: 10px 0px 10px 0px;
 }
 
 .legenda-foto {
