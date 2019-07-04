@@ -5,30 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Google Glass - Especificações</title>
+    <title>Tudo sobre o Google Glass</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/estiloMobile.css">
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="css/estiloMobile.css">
     <link rel="stylesheet" media="screen and (min-width: 768px)" href="css/estiloDesktop.css">
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="css/fotosMobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="css/fotosDesktop.css">
 </head>
 
-<body>
+<body class="corpo">
     <div class="interface">
         <header class="cabecalho-site">
 
             <div class="titulos-abertura">
                 <div class="apenas-titulos">
-                    <h1 class="titulo-principal">Google Glass</h1>
-                    <h2 class="subtitulo-principal">A revolução está chegando</h2>
+                    <h1 class="titulo-cabecalho">Google Glass</h1>
+                    <h2 class="subtitulo-cabecalho">A revolução está chegando</h2>
                 </div>
 
-                <div class="imagem-titulo-mobile">
-                    <img src="img/fotos-min.png" class="icone" alt="Imagem do Google Glass">
-                </div>
-                <div class="imagem-titulo-desktop">
-                    <img src="img/fotos.png" class="icone" alt="Imagem do Google Glass">
-                </div>
+                <img src="img/fotos-min.png" class="icone imagem-titulo-mobile" alt="Câmera e fotos">
+
+                <img src="img/fotos.png" class="icone imagem-titulo-desktop" alt="Câmera e fotos">
             </div>
 
             <nav class="menu-navegacao">
@@ -39,7 +38,7 @@
                     <a href="especificacoes.html" class="menu-link">
                         <li class="menu-item">especificações</li>
                     </a>
-                    <a href="fotos.html" class="menu-link">
+                    <a href="#principal" class="menu-link">
                         <li class="menu-item">fotos</li>
                     </a>
                     <a href="midia.html" class="menu-link">
@@ -55,15 +54,24 @@
 
         <main class="principal-full" id="principal">
             <header class="cabecalho-corpo">
-                <h3 class="breadcrumbs">Glass > Especificações</h3>
-                <h1 class="titulo-principal">Raio-X no Google Glass</h1>
+                <h3 class="breadcrumbs">Glass > Fotos</h3>
+                <h1 class="titulo-principal">Galeria de imagens do Google Glass</h1>
                 <h2 class="subtitulo-principal">por Filipe de Paula</h2>
                 <h3 class="data">Atualizado em 01/07/2019</h3>
             </header>
 
-            <p class="paragrafo-artigo">Clique em qualquer área destacada da imagem para ter mais
-                informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te
-                levar a um lugar cheio de novas informações.</p>
+            <p class="paragrafo-artigo">Veja na nossa galeria de fotos várias belas imagens que mostram
+                algumas das principais características do Google Glass, como recursos e propriedades que
+                estão impressionando o mundo inteiro.</p>
+
+            <ul class="album">
+                <li class="album-item" id="foto01"><span class="foto-legenda">Agenda e lembretes</span></li>
+                <li class="album-item" id="foto02"><span class="foto-legenda">Sergey Brin usando o Glass</span></li>
+                <li class="album-item" id="foto03"><span class="foto-legenda">Leve e compacto</span></li>
+                <li class="album-item" id="foto04"><span class="foto-legenda">Sensação de uma tela de 50"</span></li>
+                <li class="album-item" id="foto05"><span class="foto-legenda">Vários tipos de lente</span></li>
+                <li class="album-item" id="foto06"><span class="foto-legenda">Informações importantes</span></li>
+            </ul>
         </main>
 
         <footer class="rodape">
