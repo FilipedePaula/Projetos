@@ -1,0 +1,28 @@
+.midia {
+    position: absolute;
+    margin: 2em auto;
+}
+
+.radio {
+    height: 30ch;
+    background: url(../img/radio.png) no-repeat;
+}
+
+#audio01 {
+    width: 60%;
+    max-width: 28ch;
+    height: 10%;
+    position: relative;
+    top: 8em;
+    left: 1.5em;
+}
+
+@media(max-width: 330px) {
+    #audio01 {
+        top: 11em;
+    }
+}
+
+#video03 {
+    width: 100%;
+}
