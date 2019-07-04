@@ -1,0 +1,70 @@
+.entrada-dados {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, .8);
+    margin: .6em 0;
+
+}
+
+.entrada-dados:hover {
+    background-color: #dddddd;
+}
+
+.legenda-formulario {
+    color: #888888;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    margin-bottom: 1em;
+}
+
+.detalhe-entrada {
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.sexo {
+    font-size: 1em;
+    margin-bottom: .1em;
+}
+
+.rotulo-entrada {
+    font-family: sans-serif;
+    color: #555555;
+    font-weight: bold;
+}
+
+.formulario {
+    border: .05em solid #cecece;
+    padding: 1em;
+    padding-bottom: 2em;
+    margin: 1em;
+    margin: 3em 0;
+}
+
+.sexo-radio {
+    margin: initial;
+}
+
+.usuario {
+    background: url(../img/icone-contato.png) no-repeat 95% 95% transparent;
+}
+
+.endereco {
+    background: url(../img/icone-endereco.png) no-repeat 95% 95% transparent;
+}
+
+.mensagem {
+    background: url(../img/icone-mensagem.png) no-repeat 95% 95% transparent;
+}
+
+.pedido {
+    background: url(../img/icone-pagamento.png)no-repeat 95% 95% transparent;
+}
+
+.botao-enviar {
+    display: block;
+    position: relative;
+    left: 20ch;
+}

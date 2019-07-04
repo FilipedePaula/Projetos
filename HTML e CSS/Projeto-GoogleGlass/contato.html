@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/estiloMobile.css">
     <link rel="stylesheet" media="screen and (min-width: 768px)" href="css/estiloDesktop.css">
+    <link rel="stylesheet" href="css/contatoMobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="css/contatoDesktop.css">
 </head>
 
 <body>
@@ -42,7 +44,7 @@
                     <a href="media.html" class="menu-link">
                         <li class="menu-item">multimídia</li>
                     </a>
-                    <a href="contato.html" class="menu-link">
+                    <a href="#principal" class="menu-link">
                         <li class="menu-item">fale conosco</li>
                     </a>
 
@@ -55,8 +57,138 @@
                 <h3 class="breadcrumbs">Glass > Contato</h3>
                 <h1 class="titulo-principal">Formulário de Contato</h1>
                 <h2 class="subtitulo-principal">por Filipe de Paula</h2>
-                <h3 class="data">Atualizado em 01/07/2019</h3>
             </header>
+
+            <form method="POST" class="Contato" action="mailto:contato@glass.com" oninput="calcTotal();">
+
+                <fieldset class="formulario usuario">
+
+                    <legend class="legenda-formulario">Identificação do Usuário</legend>
+                    <p>
+                        <label for="nome" class="rotulo-entrada">Nome:</label>
+                        <input type="text" class="entrada-dados" name="nome" id="nome" size="20" maxlength="20"
+                            placeholder="Primeiro nome" autofocus>
+                    </p>
+                    <p>
+                        <label for="sob" class="rotulo-entrada">Sobrenome:</label>
+                        <input type="text" class="entrada-dados" name="sob" id="sob" size="25" maxlength="40"
+                            placeholder="Sobrenome">
+                    </p>
+                    <p>
+                        <label for="email" class="rotulo-entrada">E-mail:</label>
+                        <input type="email" class="entrada-dados" name="email" id="email" size="30" maxlength="50"
+                            placeholder="E-mail">
+                    </p>
+
+                    <fieldset class="formulario sexo">
+                        <legend class="legenda-formulario sexo">Sexo</legend>
+
+                        <input type="radio" class="entrada-dados sexo-radio" name="sexo" id="masc" checked="">
+                        <label for="masc" class="rotulo-entrada">Masculino</label><br>
+
+                        <input type="radio" class="entrada-dados sexo-radio" name="sexo" id="fem">
+                        <label for="fem" class="rotulo-entrada">Feminino</label>
+                    </fieldset>
+
+                    <p>
+                        <label for="nasc" class="rotulo-entrada">Data de Nascimento:</label>
+                        <input type="date" class="entrada-dados" name="nasc" id="nasc">
+                    </p>
+                </fieldset>
+
+                <fieldset class="formulario endereco">
+
+                    <legend class="legenda-formulario">Endereço do Usuário</legend>
+                    <p>
+                        <label for="rua" class="rotulo-entrada">Logradouro:</label>
+                        <input type="text" class="entrada-dados" name="rua" id="rua" size="25" maxlength="50"
+                            placeholder="Rua, Av., Trav. ...">
+                    </p>
+                    <p>
+                        <label for="num" class="rotulo-entrada">Número:</label>
+                        <input type="number" class="entrada-dados" name="num" id="num" size="5" min="0" max="99999"
+                            placeholder="Número">
+                    </p>
+                    <p>
+                        <label for="est" class="rotulo-entrada">Estado:</label>
+                        <select name="est" class="entrada-dados" id="est">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="cid" class="rotulo-entrada">Cidade:</label>
+                        <input type="text" class="entrada-dados" name="cid" id="cid" size="20" maxlength="20"
+                            placeholder="Cidade">
+                    </p>
+                </fieldset>
+
+                <fieldset class="formulario mensagem">
+
+                    <legend class="legenda-formulario">Mensagem do Usuário</legend>
+                    <p>
+                        <label for="urg" class="rotulo-entrada">Urgência:</label>
+                        <span class="detalhe-entrada">Mín</span>
+                        <input type="range" class="entrada-dados" name="urg" id="urg" min="1" max="5">
+                        <span class="detalhe-entrada">Máx</span>
+                    </p>
+                    <p>
+                        <label for="msg" class="rotulo-entrada">Mensagem:</label>
+                        <textarea name="msg" class="entrada-dados" id="msg" cols="30" rows="5"
+                            placeholder="Deixe aqui sua mensagem"></textarea>
+                    </p>
+                </fieldset>
+
+                <fieldset class="formulario pedido">
+
+                    <legend class="legenda-formulario">Quero um Google Glass</legend>
+                    <p>
+                        <input type="checkbox" class="entrada-dados" name="ped" id="ped" checked="">
+                        <label for="ped" class="rotulo-entrada">Gostaria de adquirir o Google Glass</label>
+                    </p>
+                    <p>
+                        <label for="cor" class="rotulo-entrada">Cor:</label>
+                        <input type="color" class="entrada-dados" name="cor" id="cor" value="#FF0000">
+                    </p>
+                    <p>
+                        <label for="qtd" class="rotulo-entrada">Quantidade:</label>
+                        <input type="number" class="entrada-dados" name="qtd" id="qtd" min="0" max="5" value="0">
+                    </p>
+                    <p>
+                        <label class="rotulo-entrada">Preço Total: R$</label>
+                        <input type="number" class="entrada-dados" name="valor" id="valor" placeholder="Total a pagar"
+                            readonly>
+                    </p>
+                </fieldset>
+
+                <input type="image" class="botao-enviar" name="enviar" id="enviar" src="img/botao-enviar.png">
+
+            </form>
 
         </main>
 
