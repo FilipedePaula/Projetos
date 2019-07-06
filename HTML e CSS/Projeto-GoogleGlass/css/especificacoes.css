@@ -1,0 +1,43 @@
+@media(max-width: 767px) {
+
+    .imagem-esquema {
+        width: 100%;
+    }
+
+    .frame-detalhes {
+        width: 100%;
+        height: 150ch;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    @media(max-width: 340px) {
+
+        .frame-detalhes {
+            height: 200ch;
+        }
+    }
+
+    @media(max-width: 320px) {
+
+        .frame-detalhes {
+            height: 220ch;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+
+    .frame-detalhes {
+        width: 50ch;
+        height: 35ch;
+        border: none;
+    }
+
+    .esquema-glass {
+        width: 115ch;
+        margin: 0 auto;
+    }
+}

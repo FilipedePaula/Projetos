@@ -9,7 +9,7 @@
 }
 
 .frames {
-    margin-bottom: 20em;
+    margin-bottom: 1em;
 }
 
 .titulo-frame {
@@ -32,6 +32,31 @@
     margin-left: 5px;
 }
 
+#camera {
+    margin-bottom: 10em;
+}
+
+@media(max-width: 500px) {
+
+    #camera {
+        margin-bottom: 8em;
+    }
+}
+
+@media(max-width: 400px) {
+
+    #camera {
+        margin-bottom: 4em;
+    }
+}
+
+@media(max-width: 350px) {
+
+    #camera {
+        margin-bottom: 3em;
+    }
+}
+
 .imagem-detalhes {
     margin-bottom: 1em;
 }
@@ -44,5 +69,9 @@
 
     #topo {
         display: block;
+    }
+
+    .frames {
+        margin-bottom: 20em;
     }
 }
