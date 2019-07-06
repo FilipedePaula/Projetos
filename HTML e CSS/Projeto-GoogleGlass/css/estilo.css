@@ -1,9 +1,56 @@
+/* Geral */
+/*-----------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
 
 @font-face {
     font-family: 'Fonte-logo';
     src: url(../fonts/bubblegum-sans-regular.otf);
 }
+
+@media (max-width: 350px) {
+
+    .interface {
+        font-size: 80%;
+    }
+}
+
+.principal-full {
+    margin: .5em;
+}
+
+@media (min-width: 768px) {
+
+    .corpo {
+        width: 100%;
+        background-color: #dddddd;
+    }
+
+    .interface {
+        background-color: #ffffff;
+        width: 115ch;
+        margin: 0 auto;
+        padding: .7em;
+        box-shadow: 0 0 .5em rgba(0, 0, 0, .6);
+    }
+
+    .imagem-titulo-mobile {
+        display: none;
+    }
+
+    .legenda-foto,
+    .subtitulo-artigo,
+    .subtitulo-cabecalho,
+    .legenda-tabela {
+        font-size: 140%;
+    }
+
+    .paragrafo-artigo {
+        font-size: 120%;
+        line-height: 1;
+    }
+}
+
+
 
 /* Cabeçalho */
 /*-----------------------------------------------------------------------------------*/
@@ -13,6 +60,7 @@
     font-family: 'Fonte-logo', Helvetica, sans-serif;
     color: #606060;
     font-size: 2.5em;
+    text-shadow: .05em .05em .05em rgba(0, 0, 0, .6);
 }
 
 .subtitulo-cabecalho,
@@ -31,13 +79,109 @@
     text-decoration: none;
 }
 
+.titulo-cabecalho {
+    font-weight: bolder;
+    text-shadow: .01em .01em .01em rgba(0, 0, 0, .6);
+    margin-bottom: .15em;
+}
+
+.titulos-abertura {
+    margin: 1em .2em;
+}
+
+@media(max-width: 767px) {
+    .titulos-abertura {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1em 2em .5em;
+    }
+
+    .cabecalho-site {
+        background: url(../img/glass-logo-min.jpg) no-repeat .5em 4em;
+    }
+
+    .menu-link {
+        color: #ffffff;
+        font-weight: bold;
+        text-shadow: .1em .1em .2em rgba(0, 0, 0, .7);
+    }
+
+    .imagem-titulo-desktop {
+        display: none;
+    }
+
+    .menu-navegacao {
+        background-image: linear-gradient(to bottom, #cccaca, #f1eeee);
+        padding: .5em;
+    }
+
+    .menu-item::after {
+        content: '\272A';
+        font-size: 1.5em;
+        padding-right: 1em;
+        color: #606060;
+        text-shadow: none;
+    }
+
+    .menu-item {
+        display: flex;
+        border: .05em solid #ffffff;
+        border-radius: 3%;
+        padding: .5em;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 768px) {
+
+    .cabecalho-site {
+        position: relative;
+        border-bottom: 0.06em solid #606060;
+        height: 18ch;
+    }
+
+    .menu-lista {
+        position: absolute;
+        top: -3ch;
+        left: 35ch;
+    }
+
+    .menu-item {
+        display: inline-block;
+        background-color: #dddddd;
+        padding: .7em;
+        margin-left: .25em;
+        color: #000000;
+        transition: background-color 1s ease-out;
+    }
+
+    .menu-item:hover {
+        color: #ffffff;
+        text-decoration: underline;
+        background-color: #606060;
+
+        transition: all .5s ease-in;
+    }
+
+    .cabecalho-site {
+        background: url(../img/glass-logo-peq.jpg) no-repeat .5em 5em;
+    }
+
+    .icone {
+        position: absolute;
+        top: 4.4ch;
+        left: 88ch;
+    }
+}
+
 /*-----------------------------------------------------------------------------------*/
+
 
 /* Cabeçalho - Corpo */
 /*-----------------------------------------------------------------------------------*/
 
 .principal {
-    margin: 0 .3em;
+    margin: 0 .4em;
 }
 
 .breadcrumbs,
@@ -69,32 +213,12 @@
     margin-bottom: 2em;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
 
 /* Artigo */
 /*-----------------------------------------------------------------------------------*/
-
-@media(min-width: 600px) {
-
-    .principal {
-        display: block;
-        width: 55%;
-        float: left;
-        border-right: .06em solid #606060;
-        padding-right: 1em;
-    }
-
-    .outras-noticias {
-        display: block;
-        width: 40%;
-        float: right;
-    }
-
-    .imagem {
-        width: 100%;
-        height: 100%;
-    }
-}
 
 .subtitulo-artigo {
     font-family: Arial, Helvetica, sans-serif;
@@ -124,7 +248,7 @@
 .enfase-artigo {
     font-size: 110%;
     font-weight: bolder;
-    color: #000000;
+    color: #606060;
 }
 
 .link-artigo {
@@ -138,13 +262,77 @@
     width: 100%;
 }
 
+.imagem {
+    width: 100%;
+}
+
+.imagem-artigo {
+    position: relative;
+    width: 100%;
+    border: 8px solid #ffffff;
+    box-shadow: 1px 1px 4px #000000;
+    margin: 2em auto;
+}
+
+@media(min-width: 600px) {
+
+    .principal {
+        display: block;
+        width: 55%;
+        float: left;
+        border-right: .06em solid #606060;
+        padding-right: 1em;
+    }
+
+    .outras-noticias {
+        display: block;
+        width: 40%;
+        float: right;
+    }
+}
+
+@media(max-width: 767px) {
+
+    .legenda-foto {
+        display: none;
+    }
+}
+
+@media(min-width: 768px) {
+
+    .titulo-legenda {
+        color: #606060;
+        background-color: #dddddd;
+        padding: 5px 0px 5px 10px;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .legenda-foto {
+        font-size: 150%;
+        opacity: 0;
+        position: absolute;
+        top: 0px;
+        background-color: rgba(0, 0, 0, .4);
+        color: #ffffff;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: opacity 1s;
+    }
+
+    .legenda-foto:hover {
+        opacity: 1;
+    }
+}
+
 /*-----------------------------------------------------------------------------------*/
 
-/* Tabela Artígo */
+/* Tabela Artigo */
 /*-----------------------------------------------------------------------------------*/
 
 .tabela-artigo {
-    width: 100%;
+    margin: 2em auto;
 }
 
 .legenda-tabela {
@@ -164,7 +352,7 @@
     text-align: center;
     vertical-align: middle;
     font-size: 1em;
-    padding: .5em 0;
+    padding: .7em;
 }
 
 .ce {
