@@ -7,6 +7,12 @@
 
 }
 
+@media(max-width: 390px) {
+    .formulario {
+        font-size: 80%;
+    }
+}
+
 .entrada-dados:hover {
     background-color: #dddddd;
 }
@@ -24,11 +30,6 @@
     font-weight: bold;
 }
 
-.sexo {
-    font-size: 1em;
-    margin-bottom: .1em;
-}
-
 .rotulo-entrada {
     font-family: sans-serif;
     color: #555555;
@@ -40,7 +41,21 @@
     padding: 1em;
     padding-bottom: 2em;
     margin: 1em;
-    margin: 3em 0;
+    margin: 1em 0;
+}
+
+@media(min-width: 768px) {
+    .formulario {
+        width: 60ch;
+        margin: 2em auto;
+    }
+}
+
+.sexo {
+    font-size: 1em;
+    margin-bottom: .1em;
+    width: 15ch;
+    margin: initial;
 }
 
 .sexo-radio {
@@ -66,5 +81,5 @@
 .botao-enviar {
     display: block;
     position: relative;
-    left: 20ch;
+    left: 60%;
 }
