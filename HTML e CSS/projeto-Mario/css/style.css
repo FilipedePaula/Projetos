@@ -1,9 +1,14 @@
 html,
 body {
-    width: 100%;
     height: 100%;
     overflow: hidden;
     margin: 0;
+}
+
+.grass,
+.sky,
+.road {
+    position: relative;
 }
 
 .sky {
@@ -11,9 +16,35 @@ body {
     background: skyblue;
 }
 
+.cloud {
+    position: absolute;
+}
+
+.cloud:nth-child(1) {
+    width: 20ch;
+    top: 12ch;
+    opacity: .5;
+    animation: wind 80s linear 2s infinite reverse both;
+}
+
+.cloud:nth-child(2) {
+    width: 30ch;
+    top: 0;
+    animation: wind 50s linear 2s infinite reverse both;
+}
+
 .grass {
     height: 30%;
     background: seagreen;
+}
+
+.grass::after {
+    content: 'By Filipe de Paula';
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #000000;
 }
 
 .road {
@@ -21,6 +52,67 @@ body {
     background: dimgray;
     border-top: 1em solid grey;
     border-bottom: 1em solid grey;
-
     box-sizing: border-box;
+}
+
+.lines {
+    box-sizing: border-box;
+    height: 0%;
+    width: 100%;
+    border: .5em dashed #fff;
+    position: absolute;
+    top: 40%;
+}
+
+.mario {
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    animation: drive 3s both infinite linear,
+        jump .3s 1.2s ease;
+}
+
+.luigi {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    animation: drive;
+    animation-duration: 4s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes drive {
+    from {
+        transform: translateX(-20ch)
+    }
+
+    to {
+        transform: translateX(239ch)
+    }
+}
+
+@keyframes wind {
+    from {
+        left: -20ch
+    }
+
+    to {
+        left: 100%
+    }
+}
+
+@keyframes jump {
+    0% {
+        top: -4ch
+    }
+
+    50% {
+        top: -50%
+    }
+
+    100% {
+        top: -4ch
+    }
 }
