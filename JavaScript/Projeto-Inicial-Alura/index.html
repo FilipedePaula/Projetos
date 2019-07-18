@@ -8,23 +8,24 @@
     <title>Filipe-Nutrição</title>
     <link rel="icon" type="image/x-ico" href="img/favicon.ico">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <header class="cabecalho-principal">
         <div class="container">
-            <h1>Filipe Nutricionista</h1>
+            <h1 class="titulo-principal">Filipe Nutricionista</h1>
         </div>
     </header>
     <main>
         <section class="container">
-            <h2>Meus pacientes</h2>
+            <h2 class="titulo-chamadas">Meus pacientes</h2>
 
-            <label for="campo-busca">Filtro:</label>
-            <input type="text" id="campo-busca" placeholder="Digite o nome do paciente">
+            <label for="campo-busca" class="rotulo">Filtro:</label>
+            <input type="text" id="campo-busca" class="campo campo-medio" placeholder="Digite o nome do paciente">
 
             <table class="tabela-pacientes">
-                <thead>
+                <thead class="cabecalho-tabela">
                     <tr>
                         <th>Nome</th>
                         <th>Peso(kg)</th>
@@ -76,27 +77,30 @@
         </section>
         <section class="container">
 
-            <h2>Adicionar novo paciente</h2>
+            <h2 class="titulo-chamadas">Adicionar novo paciente</h2>
 
             <form id="form-adicionar">
 
                 <div class="campo-full">
-                    <label for="campo-nome">Nome:</label>
-                    <input type="text" id="campo-nome" class="campo" placeholder="Digite o nome do paciente">
+                    <label for="campo-nome" class="rotulo">Nome:</label>
+                    <input type="text" id="campo-nome" class="campo" placeholder="Nome do paciente">
                 </div>
                 <div class="campos">
-                    <label for="campo-peso">Peso:</label>
-                    <input type="text" id="campo-peso" class="campo campo-medio"
-                        placeholder="Digite o peso do paciente">
-                    <label for="campo-altura">Altura:</label>
-                    <input type="text" id="campo-altura" class="campo campo-medio"
-                        placeholder="Digite a altura do paciente">
-                    <label for="campo-gordura">Gordura:</label>
-                    <input type="text" id="campo-gordura" class="campo campo-medio"
-                        placeholder="Digite a % de gordura do paciente">
-
-                    <button id="botao-adicionar" class="botao bto-principal">Adicionar</button>
+                    <div class="campo-parte">
+                        <label for="campo-peso" class="rotulo">Peso:</label>
+                        <input type="text" id="campo-peso" class="campo" placeholder="Peso do paciente">
+                    </div>
+                    <div class="campo-parte">
+                        <label for="campo-altura" class="rotulo">Altura:</label>
+                        <input type="text" id="campo-altura" class="campo" placeholder="Altura do paciente">
+                    </div>
+                    <div class="campo-parte">
+                        <label for="campo-gordura" class="rotulo">Gordura:</label>
+                        <input type="text" id="campo-gordura" class="campo" placeholder="% de gordura do paciente">
+                    </div>
                 </div>
+
+                <button id="botao-adicionar" class="botao bto-principal">Adicionar</button>
             </form>
         </section>
     </main>

@@ -1,0 +1,88 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+
+.cabecalho-principal {
+    background: #333;
+    width: 100%;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+.titulo-principal {
+    font-size: 2em;
+    color: #fff;
+    padding: .5em 0;
+}
+
+.titulo-chamadas {
+    font-size: 2.5em;
+    padding: .5em 0;
+    border-bottom: .03em solid #e4e3e3;
+    margin-bottom: 1em;
+}
+
+.rotulo {
+    display: block;
+    font-size: .9em;
+    color: #606060;
+    margin-bottom: .2em;
+    margin-top: 1em;
+}
+
+.campo {
+    width: 100%;
+    padding: .7em;
+}
+
+.campo-medio {
+    max-width: 30ch;
+}
+
+.campos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.campo-parte {
+    width: 30%;
+}
+
+.tabela-pacientes {
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    table-layout: fixed;
+}
+
+.tabela-pacientes th,
+.tabela-pacientes td {
+    border: .03em solid #d8d7d7;
+    vertical-align: middle;
+    padding: .5em 0;
+}
+
+.cabecalho-tabela {
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.botao {
+    width: 15ch;
+    border: none;
+    padding: .8em 0;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.bto-principal {
+    background: rgb(26, 123, 235);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    border-bottom: .2em solid #000;
+}
