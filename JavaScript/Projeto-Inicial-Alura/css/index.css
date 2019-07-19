@@ -91,3 +91,8 @@ body {
 .paciente-invalido {
     background: lightcoral;
 }
+
+.mensagens-erro {
+    color: red;
+    font-size: 1em;
+}
