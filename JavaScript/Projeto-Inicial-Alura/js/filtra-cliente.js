@@ -8,8 +8,9 @@ campoFiltro.addEventListener("input", function () {
         pacientes.forEach(function (paciente) {
 
             var nome = paciente.querySelector(".info-nome").textContent;
+            var input = campoFiltro.value;
 
-            var busca = new RegExp(campoFiltro.value, "i");
+            var busca = new RegExp(input, "i");
 
             if (!(busca.test(nome))) {
                 paciente.classList.add("invisivel");

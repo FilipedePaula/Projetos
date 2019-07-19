@@ -92,7 +92,10 @@ body {
     background: lightcoral;
 }
 
-.mensagens-erro {
+.mensagens-erro,
+.erro-ajax {
+    margin-top: 1em;
+    display: block;
     color: red;
     font-size: 1em;
 }
