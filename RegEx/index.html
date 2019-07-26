@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RegEx Tester</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="container">
+
+    <h1 class="title">RegEx Tester</h1>
+
+    <form class="form">
+
+        <div class="form-group">
+            <label for="target" class="label">Target (String)</label>
+            <input type="text" id="target" class="form-field" required autofocus autocomplete="off"
+                placeholder="Tape a target">
+        </div>
+
+        <div class="form-group">
+            <label for="pattern" class="label">Pattern (RegEx)</label>
+            <input type="text" id="pattern" class="form-field" required autocomplete="off" placeholder="Tape a pattern">
+        </div>
+
+        <div class="form-group">
+            <button class="btn-regex">Execute RegEx</button>
+        </div>
+
+        <div class="form-group">
+            <label class="checkbox"><input type="checkbox" id="showIndex" value="true">Show Index</label>
+            <label class="checkbox"><input type="checkbox" id="showGroup" value="true">Show Group</label>
+        </div>
+
+        <div class="form-group">
+            <label for="result" class="label" id="labelResults">Matchs (Results)</label>
+            <input type="text" id="result" class="form-field" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="result" class="label" id="labelHighlight">Highlight</label>
+            <div id="highlightText"></div>
+        </div>
+    </form>
+
+    <p class="signature">By Filipe de Paula</p>
+    <div class="text-area">
+        <textarea class="form-field" id="comment" rows="8"></textarea>
+    </div>
+
+</body>
+
+</html>
