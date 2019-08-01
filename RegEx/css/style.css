@@ -81,6 +81,14 @@
     background: #eeeeee;
 }
 
+.resultPositive {
+    border: 1px solid lime;
+}
+
+.resultNegative {
+    border: 1px solid crimson;
+}
+
 #highlightText {
     font-size: 2em;
     margin-bottom: 4em;
@@ -102,4 +110,8 @@
     height: 100%;
     width: 90%;
     font-size: 1.2em;
+}
+
+.fundo-azul {
+    background: #3071a9;
 }
