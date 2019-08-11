@@ -1,0 +1,35 @@
+.frase {
+    font-size: 1.3em;
+    margin: 1.5em 0;
+    text-align: left;
+}
+
+.information {
+    margin-bottom: 1em;
+}
+
+.information li {
+    margin-top: .5em;
+}
+
+.user-typer {
+    font-size: 1.3em;
+    height: 12ch;
+    border: .1em solid #000000;
+}
+
+.typer-off {
+    background: lightgray;
+}
+
+.icons {
+    vertical-align: middle;
+}
+
+.green-border {
+    border: .1em solid #00ff00;
+}
+
+.red-border {
+    border: .1em solid #ff0000;
+}

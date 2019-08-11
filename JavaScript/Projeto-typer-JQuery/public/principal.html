@@ -6,29 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Typer JQuery</title>
 </head>
 
 <body>
-    <h1 class="title">Typer JQuery</h1>
+    <div class="container">
+        <h1 class="title center">Typer JQuery</h1>
 
-    <p class="frase">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe placeat ipsa exercitationem, aut
-        deleniti accusantium blanditiis nisi illum ab, unde neque. Laborum minus ad eius ducimus, facilis atque
-        quibusdam dignissimos.</p>
+        <p class="frase center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe placeat ipsa
+            exercitationem, aut deleniti accusantium blanditiis nisi illum ab, unde neque. Laborum minus ad
+            eius ducimus, facilis atque quibusdam dignissimos.</p>
 
-    <ul>
-        <li> <span id="words-amount">X</span> words</li>
-        <li><span class="time">10</span> seconds</li>
-    </ul>
+        <ul class="information center">
+            <li>
+                <i class="material-icons icons">description</i>
+                <span id="words-amount">10</span> words
+            </li>
+            <li>
+                <i class="material-icons icons">query_builder</i>
+                <span class="time">10</span> seconds
+            </li>
+        </ul>
 
-    <textarea class="user-typer" cols="30" rows="10"></textarea>
-    <button class="restart-btn">Restart</button>
+        <textarea class="user-typer" cols="30" rows="10"></textarea>
+        <a class="btn-floating btn-large waves-effect waves-light red restart-btn"><i
+                class="material-icons">restore</i></a>
 
-    <ul>
-        <li><span id="char-counter">X</span> characters</li>
-        <li><span id="word-counter">X</span> words</li>
-    </ul>
+        <ul class="information center">
+            <li><span id="char-counter">0</span> characters</li>
+            <li><span id="word-counter">0</span> words</li>
+        </ul>
+    </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
