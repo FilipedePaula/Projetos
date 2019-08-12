@@ -8,6 +8,7 @@ $(function () {
     startStopwatch();
     compareText();
     $('.restart-btn').click(restartGame);
+    $('.delete-btn').click(deleteLine);
 });
 
 
@@ -70,20 +71,6 @@ function endGame() {
     $('.restart-btn').attr('disabled', false);
     userTyper.toggleClass('typer-off');
     fillScore();
-}
-
-function fillScore() {
-    let score = $('.score').find('tbody');
-    let user = 'Filipe';
-    let totalWords = $('#word-counter').text();
-
-    let line = '<tr>' +
-        '<td>' + user + '</td>' +
-        '<td>' + totalWords + '</td>' +
-        '</tr>';
-
-    score.prepend(line);
-
 }
 
 function restartGame() {
