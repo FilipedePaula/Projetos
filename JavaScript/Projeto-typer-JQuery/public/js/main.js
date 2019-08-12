@@ -58,13 +58,32 @@ function startStopwatch() {
             time--;
             $('.time').text(time);
             if (time < 1) {
-                userTyper.attr('disabled', true);
                 clearInterval(id);
-                $('.restart-btn').attr('disabled', false);
-                userTyper.toggleClass('typer-off');
+                endGame();
             }
         }, 1000);
     });
+}
+
+function endGame() {
+    userTyper.attr('disabled', true);
+    $('.restart-btn').attr('disabled', false);
+    userTyper.toggleClass('typer-off');
+    fillScore();
+}
+
+function fillScore() {
+    let score = $('.score').find('tbody');
+    let user = 'Filipe';
+    let totalWords = $('#word-counter').text();
+
+    let line = '<tr>' +
+        '<td>' + user + '</td>' +
+        '<td>' + totalWords + '</td>' +
+        '</tr>';
+
+    score.prepend(line);
+
 }
 
 function restartGame() {
