@@ -1,3 +1,5 @@
+$(".score-btn").click(turnScore);
+
 function newLine(user, totalWords) {
     let line = $('<tr>');
     let name = $('<td>').text(user);
@@ -26,11 +28,31 @@ function fillScore() {
 
     line.find('.delete-btn').click(deleteLine);
 
-    score.prepend(line);
+    score.append(line);
+
+    $('.score').slideDown(600);
+    scrollScore();
 
 }
 
 function deleteLine(event) {
     event.preventDefault();
-    $(this).parent().parent().remove();
+    line = $(this).parent().parent();
+    line.fadeOut(1000);
+
+    setTimeout(function () {
+        line.remove();
+    }, 1000);
+}
+
+function turnScore() {
+    $('.score').stop().slideToggle(600);
+}
+
+function scrollScore() {
+    let scorePosition = $('.score').offset().top;
+
+    $('html').animate({
+        scrollTop: scorePosition + 'px'
+    }, 1000);
 }

@@ -12,7 +12,7 @@
     <title>Typer JQuery</title>
 </head>
 
-<body>
+<body class="full-body">
     <div class="container">
         <h1 class="title center">Typer JQuery</h1>
 
@@ -23,17 +23,24 @@
         <ul class="information center">
             <li>
                 <i class="material-icons icons">description</i>
-                <span id="words-amount">10</span> words
+                <span id="words-amount">0</span> words
             </li>
             <li>
                 <i class="material-icons icons">query_builder</i>
-                <span class="time">10</span> seconds
+                <span class="time">2</span> seconds
             </li>
         </ul>
 
         <textarea class="user-typer" cols="30" rows="10"></textarea>
-        <a class="btn-floating btn-large waves-effect waves-light red restart-btn"><i
-                class="material-icons">restore</i></a>
+
+        <div class="buttons">
+            <a class="btn-floating btn-large waves-effect waves-light red restart-btn">
+                <i class="material-icons">restore</i>
+            </a>
+            <a class="btn-floating btn-large waves-effect waves-light green score-btn">
+                <i class="material-icons">assignment</i>
+            </a>
+        </div>
 
         <ul class="information center">
             <li><span id="char-counter">0</span> characters</li>

@@ -1,3 +1,7 @@
+.full-body {
+    overflow: scroll;
+}
+
 .frase {
     font-size: 1.3em;
     margin: 1.5em 0;
@@ -32,4 +36,8 @@
 
 .red-border {
     border: .1em solid #ff0000;
+}
+
+.score {
+    display: none;
 }
