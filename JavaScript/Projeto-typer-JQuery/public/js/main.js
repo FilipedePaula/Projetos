@@ -1,6 +1,5 @@
 let startTime = $('.time').text();
 let userTyper = $(".user-typer");
-let frase = $(".frase").text().replace(/\s+/g, ' ');
 
 $(function () {
     updateFrase();
@@ -13,6 +12,7 @@ $(function () {
 
 
 function updateFrase() {
+    let frase = $(".frase").text().replace(/\s+/g, ' ');
     let wordsLength = frase.split(' ').length;
     let wordsAmount = $("#words-amount");
 
@@ -36,6 +36,7 @@ function startCounter() {
 
 function compareText() {
     userTyper.on('input', function () {
+        let frase = $(".frase").text().replace(/\s+/g, ' ');
         let typed = userTyper.val();
         let compare = frase.substr(0, typed.length);
 
@@ -50,10 +51,9 @@ function compareText() {
 }
 
 function startStopwatch() {
-    let time = $('.time').text();
-
     userTyper.one("focus", function () {
 
+        let time = $('.time').text();
         $('.restart-btn').attr('disabled', true);
         let id = setInterval(function () {
             time--;
@@ -83,4 +83,8 @@ function restartGame() {
     userTyper.removeClass('red-border');
     userTyper.removeClass('green-border');
     startStopwatch();
+}
+
+function updateTime(time) {
+    $('.time').text(time);
 }

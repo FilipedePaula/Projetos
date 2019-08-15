@@ -4,7 +4,7 @@
 
 .frase {
     font-size: 1.3em;
-    margin: 1.5em 0;
+    margin: 1em 0;
     text-align: left;
 }
 
@@ -39,5 +39,12 @@
 }
 
 .score {
+    display: none;
+}
+
+.ajax-error {
+    font-size: 1.1em;
+    color: red;
+    margin-bottom: 1em;
     display: none;
 }
