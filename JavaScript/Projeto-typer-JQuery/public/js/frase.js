@@ -1,6 +1,7 @@
 $('.frase-btn').click(randomFrase);
 
 function randomFrase() {
+    $('.spinner').toggle();
 
     $.get('http://localhost:3000/frases', changeFrase)
         .fail(function () {
@@ -8,6 +9,9 @@ function randomFrase() {
             setTimeout(function () {
                 $('.ajax-error').toggle();
             }, 2500);
+        })
+        .always(function () {
+            $('.spinner').toggle();
         });
 }
 

@@ -48,3 +48,7 @@
     margin-bottom: 1em;
     display: none;
 }
+
+.spinner {
+    display: none;
+}
