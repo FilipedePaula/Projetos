@@ -56,3 +56,7 @@
 #frase-id {
     width: 40px;
 }
+
+.sync-btn {
+    float: right;
+}

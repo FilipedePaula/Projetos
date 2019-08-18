@@ -47,11 +47,10 @@ function fraseById() {
         });;
 }
 
-function changeById(data) {
-    console.log(data);
+function changeById(dataset) {
     var frase = $('.frase');
 
-    frase.text(data.texto);
+    frase.text(dataset.texto);
     updateFrase();
-    updateTime(data.tempo);
+    updateTime(dataset.tempo);
 }

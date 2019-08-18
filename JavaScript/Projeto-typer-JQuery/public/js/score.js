@@ -1,4 +1,5 @@
 $(".score-btn").click(turnScore);
+$('.sync-btn').click(syncScore);
 
 function newLine(user, totalWords) {
     let line = $('<tr>');
@@ -55,4 +56,42 @@ function scrollScore() {
     $('html').animate({
         scrollTop: scorePosition + 'px'
     }, 1000);
+}
+
+function syncScore() {
+    let score = [];
+    let rows = $('tbody>tr');
+
+    rows.each(function () {
+        let user = $(this).find('td:nth-child(1)').text();
+        let tWords = $(this).find('td:nth-child(2)').text();
+
+        let objectScore = {
+            usuario: user,
+            pontos: tWords
+        }
+
+        score.push(objectScore);
+    });
+
+    let data = {
+        placar: score
+    };
+
+    $.post('http://localhost:3000/placar', data, function () {
+
+        console.log('score successful');
+    });
+}
+
+function updateScore() {
+
+    $.get('http://localhost:3000/placar', function (data) {
+
+        $(data).each(function () {
+            let row = newLine(this.usuario, this.pontos);
+            row.find('.delete-btn').click(deleteLine);
+            $('tbody').append(row);
+        });
+    });
 }

@@ -8,6 +8,7 @@ $(function () {
     compareText();
     $('.restart-btn').click(restartGame);
     $('.delete-btn').click(deleteLine);
+    updateScore();
 });
 
 
@@ -86,5 +87,6 @@ function restartGame() {
 }
 
 function updateTime(time) {
+    startTime = time;
     $('.time').text(time);
 }
