@@ -60,3 +60,16 @@
 .sync-btn {
     float: right;
 }
+
+.select-users {
+    display: inline-block;
+}
+
+#users {
+    display: block;
+}
+
+.selectize-input {
+    width: 15ch;
+    vertical-align: middle;
+}

@@ -22,7 +22,7 @@ function newLine(user, totalWords) {
 
 function fillScore() {
     let score = $('.score').find('tbody');
-    let user = 'Filipe';
+    let user = $('#users').val();
     let totalWords = $('#word-counter').text();
 
     let line = newLine(user, totalWords);

@@ -9,6 +9,10 @@ $(function () {
     $('.restart-btn').click(restartGame);
     $('.delete-btn').click(deleteLine);
     updateScore();
+    $('#users').selectize({
+        create: true,
+        sortField: 'text'
+    });
 });
 
 

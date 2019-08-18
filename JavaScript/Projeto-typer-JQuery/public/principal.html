@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/libs/materialize.min.css">
     <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Typer JQuery</title>
 </head>
@@ -42,16 +43,27 @@
             <a class="btn-floating btn-large waves-effect waves-light red restart-btn">
                 <i class="material-icons">restore</i>
             </a>
+
             <a class="btn-floating btn-large waves-effect waves-light green score-btn">
                 <i class="material-icons">assignment</i>
             </a>
+
             <a class="btn-floating btn-large waves-effect waves-light blue frase-btn">
                 <i class="material-icons">shuffle</i>
             </a>
+
             <a class="btn-floating btn-large waves-effect waves-light cyan frase-id-btn">
                 <i class="material-icons">repeat_one</i>
             </a>
             <input type="number" min="0" id="frase-id" placeholder="0">
+
+            <div class="select-users">
+                <select id="users">
+                    <option value="Filipe">Filipe</option>
+                    <option value="Digitron">Digitron</option>
+                </select>
+            </div>
+
             <a class="btn-floating btn-large waves-effect waves-light yellow sync-btn">
                 <i class="material-icons">swap_vert</i>
             </a>
@@ -82,6 +94,7 @@
     <script src="js/main.js"></script>
     <script src="js/score.js"></script>
     <script src="js/frase.js"></script>
+    <script src="js/selectize.js"></script>
 </body>
 
 </html>
