@@ -80,7 +80,13 @@ function syncScore() {
 
     $.post('http://localhost:3000/placar', data, function () {
 
-        console.log('score successful');
+        $('.tooltip').tooltipster('open').tooltipster('content', 'Sync Successful');
+    }).fail(function () {
+        $('.tooltip').tooltipster('open').tooltipster('content', 'Sync Fail');
+    }).always(function () {
+        setTimeout(function () {
+            $('.tooltip').tooltipster('close');
+        }, 2000)
     });
 }
 
