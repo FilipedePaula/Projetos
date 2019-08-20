@@ -27,7 +27,7 @@ h2 {
 
 /** Header **/
 header {
-  border-top: 5px solid #66DDDD;
+  border-top: 5px solid #c24e4b;
   background: rgba(30, 44, 53, 0.8);
   height: 90px;
   width: 100%;
@@ -38,7 +38,7 @@ header .container {
   position: relative;
 }
 
-.menu-opcoes {
+header .menu-principal {
   position: absolute;
   right: 0;
   top: -.5em;
@@ -46,21 +46,21 @@ header .container {
   font-weight: lighter;
 }
 
-.menu-opcoes ul {
+header .menu-principal ul {
   padding-left: 0;
 }
 
-.menu-opcoes li {
+header .menu-principal li {
   display: inline-block;
   width: 5em;
 }
 
-.menu-opcoes a {
+header .menu-principal a {
   color: white;
   text-decoration: none;
 }
 
-.menu-opcoes a:hover {
+header .menu-principal a:hover {
   text-decoration: underline;
 }
 
@@ -91,20 +91,28 @@ header .container {
 
 .destaque button {
   margin-top: 1em;
-  background: #66DDDD;
+  background: #c24e4b;
   border: 0;
   padding: .6em;
   font-size: 1.2em;
-  -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
   box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
   font-weight: bold;
 }
 
-
 /** Sobre **/
 .sobre {
   background: #ebebeb;
+}
+
+.sobre p {
+  font: .9em/1.8 sans-serif;
+}
+
+.sobre p:first-child {
+  margin-bottom: 3em;
 }
 
 .duas-colunas {
@@ -116,14 +124,6 @@ header .container {
 
 .duas-colunas h3 {
   margin: 0;
-}
-
-.sobre p {
-  font: .9em/1.8 sans-serif;
-}
-
-.sobre p:first-child {
-  margin-bottom: 3em;
 }
 
 .plataformas {
@@ -181,7 +181,7 @@ header .container {
 .plano h3 {
   color: #fff;
   font-size: 1.8em;
-  background: #66DDDD;
+  background: #c24e4b;
   text-align: center;
   height: 2em;
   padding-top: .6em;
@@ -190,8 +190,22 @@ header .container {
 
 .plano div {
   text-align: center;
-  color: #66DDDD;
+  color: #c24e4b;
   font-size: 2.75em;
+}
+
+.plano button {
+  background: #c24e4b;
+  border: 0;
+  color: #fff;
+  width: 210px;
+  height: 38px;
+  font-size: 1.2em;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+  -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  margin-left: 2em;
 }
 
 .itens-plano {
@@ -214,19 +228,6 @@ header .container {
   float: right;
 }
 
-.plano button {
-  background: #66DDDD;
-  border: 0;
-  color: #fff;
-  width: 210px;
-  height: 38px;
-  font-size: 1.2em;
-  -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
-  box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
-  margin-left: 2em;
-}
-
 .icone-check,
 .icone-x {
   background: url(../imagens/sprite.png) no-repeat;
@@ -241,8 +242,6 @@ header .container {
 .icone-x {
   background-position: -33px -5px;
 }
-
-
 
 /** Blog **/
 .blog {
@@ -314,7 +313,7 @@ textarea {
 
 .contato button {
   margin: 0 auto;
-  background: #66DDDD;
+  background: #c24e4b;
   border: 0;
   color: #fff;
   width: 210px;
@@ -322,6 +321,7 @@ textarea {
   font-size: 1.2em;
   -webkit-border-radius: 0.3em;
   border-radius: 0.3em;
+  -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
   box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
 }
 
@@ -369,9 +369,9 @@ footer .container img {
   position: absolute;
 }
 
-.menu-rodape ul li {
-  display: inline-block;
-  margin-left: 2em;
+.menu-rodape li,
+.social li {
+  display: inline;
 }
 
 .menu-rodape {
@@ -379,19 +379,14 @@ footer .container img {
   right: 0;
 }
 
+.menu-rodape ul li {
+  display: inline-block;
+  margin-left: 2em;
+}
+
 .social {
   bottom: 0;
   right: 0;
-}
-
-.menu-rodape li,
-.social li {
-  display: inline;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
 }
 
 .social li {
@@ -413,6 +408,11 @@ footer a {
   background-size: 50px 50px;
 }
 
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .social a[href*="facebook"] {
   background-image: url(../imagens/facebook.png);
 }
@@ -424,3 +424,5 @@ footer a {
 .social a[href*="instagram"] {
   background-image: url(../imagens/instagram.png);
 }
+
+/*# sourceMappingURL=estilos.css.map */
