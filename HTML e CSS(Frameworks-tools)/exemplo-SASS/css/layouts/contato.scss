@@ -6,6 +6,10 @@
 form {
     margin: 0 auto;
     width: 50%;
+
+    @media #{$mq-mobile} {
+        width: auto;
+    }
 }
 
 .contato input,
@@ -26,5 +30,5 @@ textarea {
     height: 38px;
     font-size: 1.2em;
     @include borda-arredondada;
-    @include sombra-padrao;
+    @extend %sombra-padrao;
 }

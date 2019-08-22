@@ -67,7 +67,7 @@ footer {
         display: block;
         width: 55px;
         height: 55px;
-        @include image-replacement;
+        @extend %image-replacement;
         margin-left: 1em;
     }
 
