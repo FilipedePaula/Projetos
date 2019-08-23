@@ -423,7 +423,7 @@ body {
 
 .titulo-secao {
   text-decoration: underline;
-  font-size: 2em;
+  font-size: 32px;
   text-align: center;
 }
 
@@ -471,7 +471,7 @@ header .menu-principal {
   position: absolute;
   right: 0;
   top: -.5em;
-  font-size: 1.2em;
+  font-size: 19px;
   font-weight: lighter;
 }
 @media (max-width: 980px) {
@@ -491,7 +491,7 @@ header .menu-principal li {
 }
 @media (max-width: 980px) {
   header .menu-principal li {
-    margin: .4em;
+    margin: 6px;
     width: auto;
   }
 }
@@ -518,23 +518,23 @@ header .menu-principal a:hover {
   }
 }
 .destaque p {
-  width: 30em;
+  width: 480px;
 }
 .destaque p:first-child {
-  width: 30em;
-  font-size: 1.3em;
+  width: 480px;
+  font-size: 21px;
   line-height: 1.1;
 }
 .destaque p:first-child:first-line {
-  font-size: 2.2em;
+  font-size: 35px;
   font-weight: bold;
 }
 .destaque button {
-  margin-top: 1em;
+  margin-top: 16px;
   background: #c24e4b;
   border: 0;
   padding: .6em;
-  font-size: 1.2em;
+  font-size: 19.2px;
   -moz-border-radius: 25px;
   -webkit-border-radius: 25px;
   border-radius: 25px;
@@ -551,7 +551,7 @@ header .menu-principal a:hover {
   font: .9em/1.8 sans-serif;
 }
 .sobre p:first-child {
-  margin-bottom: 3em;
+  margin-bottom: 48px;
 }
 
 .duas-colunas {
@@ -606,17 +606,17 @@ header .menu-principal a:hover {
 }
 .plano h3 {
   color: #fff;
-  font-size: 1.8em;
+  font-size: 28.8px;
   background: #c24e4b;
   text-align: center;
-  height: 2em;
-  padding-top: .6em;
+  height: 32px;
+  padding-top: 10px;
   margin-top: 0;
 }
 .plano div {
   text-align: center;
   color: #c24e4b;
-  font-size: 2.75em;
+  font-size: 44px;
 }
 .plano button {
   background: #c24e4b;
@@ -624,25 +624,25 @@ header .menu-principal a:hover {
   color: #fff;
   width: 210px;
   height: 38px;
-  font-size: 1.2em;
+  font-size: 19px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   -moz-box-shadow: black 0 2px 6.65px;
   -webkit-box-shadow: black 0 2px 6.65px;
   box-shadow: black 0 2px 6.65px;
-  margin-left: 2em;
+  margin-left: 32px;
 }
 
 .itens-plano {
-  padding-left: 1.2em;
+  padding-left: 19px;
 }
 .itens-plano li {
-  font-size: 1em;
+  font-size: 16px;
   list-style: none;
   border-bottom: 1px solid #acacac;
-  padding: .5em;
-  width: 14.8em;
+  padding: 8px;
+  width: 237px;
 }
 .itens-plano li:last-child {
   border: 0;
@@ -696,7 +696,7 @@ header .menu-principal a:hover {
 }
 
 .post-destaque {
-  margin-right: 2em;
+  margin-right: 32px;
 }
 .post-destaque img {
   width: 100%;
@@ -706,8 +706,8 @@ header .menu-principal a:hover {
   text-decoration: none;
   color: black;
   background: url(../imagens/icone-relogio.png) left center no-repeat;
-  padding-left: 2.5em;
-  height: 1.7em;
+  padding-left: 40px;
+  height: 27px;
   display: block;
 }
 .posts-antigos a:hover {
@@ -732,7 +732,7 @@ form {
 .contato input,
 textarea {
   width: 100%;
-  margin-bottom: .8em;
+  margin-bottom: 13px;
   padding: 4px 8px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -747,7 +747,7 @@ textarea {
   color: #fff;
   width: 210px;
   height: 38px;
-  font-size: 1.2em;
+  font-size: 19.2px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -782,8 +782,8 @@ footer::before {
   z-index: -1;
 }
 footer .container {
-  padding-top: 3em;
-  height: 6.5em;
+  padding-top: 48px;
+  height: 104px;
   position: relative;
 }
 footer .container img {
@@ -800,12 +800,12 @@ footer .container img {
 }
 
 .menu-rodape {
-  top: 1em;
+  top: 16px;
   right: 0;
 }
 .menu-rodape ul li {
   display: inline-block;
-  margin-left: 2em;
+  margin-left: 32px;
 }
 
 .social {
@@ -819,7 +819,7 @@ footer .container img {
   display: block;
   width: 55px;
   height: 55px;
-  margin-left: 1em;
+  margin-left: 16px;
 }
 .social a {
   background-position: top;

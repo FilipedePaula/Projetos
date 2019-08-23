@@ -4,4 +4,8 @@
     background-repeat: no-repeat;
 }
 
+@function multiplica-fonte($multiplicador) {
+    @return round($multiplicador * $fonte-padrao);
+}
+
 @import "compass/css3";
