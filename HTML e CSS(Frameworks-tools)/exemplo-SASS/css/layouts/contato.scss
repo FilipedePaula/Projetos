@@ -28,7 +28,7 @@ textarea {
     color: $cor-branca;
     width: 210px;
     height: 38px;
-    font-size: 1.2 * $fonte-padrao;
+    font-size: multiplica-fonte(1.2);
     @include border-radius(10px);
     @include box-shadow(black 0 2px 6.65px);
 }
