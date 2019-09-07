@@ -13,19 +13,7 @@ class NegociacaoController {
     adiciona(event) {
         event.preventDefault();
 
-        let data = new Date(...
-            this._data.value.split('-')
-            .map(function (item, indice) {
-                return item - indice % 2;
-            })
-        );
-
-        console.log(data);
-
-        let dataFormatada = data.getDate() + '/' +
-            (data.getMonth() + 1) + '/' + data.getFullYear();
-
-        console.log(dataFormatada);
+        let data = DateHelper.textoParaData(this._data.value);
 
         let negociacao = new Negociacao(
             data,
@@ -34,6 +22,7 @@ class NegociacaoController {
         );
 
         console.log(negociacao);
+        console.log(DateHelper.dataParaTexto(negociacao.data));
 
         this.reinicia();
     }
