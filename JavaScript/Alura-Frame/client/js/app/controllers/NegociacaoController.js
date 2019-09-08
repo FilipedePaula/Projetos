@@ -8,7 +8,9 @@ class NegociacaoController {
         this._quantidade = $('#quantidade');
         this._valor = $('#valor');
         this._listaNegociacoes = new ListaNegociacoes();
+        this._negociacoesView = new NegociacoesView($('#negociacoesView'));
 
+        this._negociacoesView.update(this._listaNegociacoes);
     }
 
     adiciona(event) {
@@ -16,7 +18,7 @@ class NegociacaoController {
 
         this._listaNegociacoes.adiciona(this._criaNegociacao());
 
-        console.log(this._listaNegociacoes.negociacoes);
+        this._negociacoesView.update(this._listaNegociacoes);
 
         this._limpaForm();
     }
@@ -32,10 +34,9 @@ class NegociacaoController {
 
     _limpaForm() {
 
-        this._data = '';
-        this._quantidade = 1;
-        this._valor = 0;
-
-        $('#data').focus();
+        this._data.value = '';
+        this._quantidade.value = 1;
+        this._valor.value = 0;
+        this._data.focus();
     }
 }
