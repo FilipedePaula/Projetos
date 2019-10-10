@@ -1,6 +1,6 @@
 .carrossel-imagem {
   object-fit: cover;
-  height: 500px;
+  height: 400px;
 }
 
 .carrossel-imagem:nth-child(1) {
@@ -12,5 +12,30 @@
 }
 
 .cor-especial {
-  color: darkred;
+  color: darkred !important;
+}
+
+.btn-darkred {
+  background-color: darkred;
+  color: white;
+  opacity: .9;
+}
+
+.borda-darkred {
+  border-color: darkred;
+}
+
+.btn-darkred:hover {
+  color: white;
+  opacity: 1;
+}
+
+.card-largura {
+  max-width: 18rem;
+}
+
+.card-altura {
+  object-fit: cover;
+  object-position: 0 60%;
+  height: 200px;
 }
