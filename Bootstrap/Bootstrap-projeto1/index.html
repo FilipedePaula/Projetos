@@ -7,12 +7,11 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>TopCasaFina Arquitetura</title>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap/css/estilos.css">
 </head>
 
 <body>
 	<main class="container">
-		<h2>Sobre Nós</h2>
-		<img class="img-responsive" src="img/empresa.jpg" alt="Arquitetos trabalhando">
 
 		--chamada principal--
 
@@ -24,14 +23,58 @@
 
 		--Sobre Nos--
 
-		Desde 1935
-		Desde 1935 trazendo casas, mansões e prédios lindos para o mundo.
+		<h2>Sobre Nós</h2>
+		<img class="img-responsive" src="img/empresa.jpg" alt="Arquitetos trabalhando">
 
-		Preços acessíveis
-		Preços a partir de R$ 1000,00.
+		<section class="panel-group" id="painel-sobre">
+			<article class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title" data-toggle="collapse" data-target="#primeiro-paragrafo" data-parent="#painel-sobre"
+						role="button" aria-expanded="true" aria-controls="collapseOne">
+						Desde 1935
+					</h3>
+				</div>
+				<div class="collapse in" id="primeiro-paragrafo">
+					<div class="panel-body">
+						<p>Desde 1935 trazendo casas, mansões e prédios lindos para o mundo.</p>
+					</div>
+				</div>
+			</article>
+			<article class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title" data-toggle="collapse" data-target="#segundo-paragrafo" data-parent="#painel-sobre"
+						role="button" aria-expanded="true" aria-controls="collapseOne">
+						Preços acessíveis
+					</h3>
+				</div>
+				<div class="collapse" id="segundo-paragrafo">
+					<div class="panel-body">
+						<p>Preços a partir de R$ 1000,00.</p>
+					</div>
+				</div>
+			</article>
+			<article class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title" data-toggle="collapse" data-target="#terceiro-paragrafo" data-parent="#painel-sobre"
+						role="button" aria-expanded="true" aria-controls="collapseOne">
+						Alegria em colaborar para um mundo mais bonito
+					</h3>
+				</div>
+				<div class="collapse" id="terceiro-paragrafo">
+					<div class="panel-body">
+						<p>Trazendo alegria para a vida das pessoas que tem dinheiro para gastar.</p>
+					</div>
+				</div>
+			</article>
+		</section>
 
-		Alegria em colaborar para um mundo mais bonito
-		Trazendo alegria para a vida das pessoas que tem dinheiro para gastar.
+
+
+
+
+
+
+
 
 		--Fim Sobre Nos--
 
@@ -86,6 +129,8 @@
 			--footer fim--
 	</main>
 
+	<script src="JQuery.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
