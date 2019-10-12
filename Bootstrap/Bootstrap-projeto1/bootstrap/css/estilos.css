@@ -9,3 +9,10 @@
   margin-bottom: 0;
   font-size: 1.5em;
 }
+
+.radio-tipo,
+.tipo-contrucao {
+  width: 49%;
+  display: inline-block;
+  vertical-align: middle;
+}
