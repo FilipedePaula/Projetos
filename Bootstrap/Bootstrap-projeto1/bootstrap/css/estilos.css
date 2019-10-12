@@ -5,7 +5,7 @@
 .titulo-depoimentos {
   background-color: #0275D8;
   color: #FFF;
-  padding: 20px 0;
+  padding: 2em 0;
   margin-bottom: 0;
   font-size: 1.5em;
 }
@@ -15,4 +15,14 @@
   width: 49%;
   display: inline-block;
   vertical-align: middle;
+}
+
+.rodape-site {
+  background: #333;
+  color: #FFF;
+  padding: 2em;
+}
+
+.email-rodape {
+  margin-bottom: 0;
 }
