@@ -11,63 +11,92 @@
 </head>
 
 <body>
-
-	<main class="corpo-site">
-
-		<section class="abertura container">
-			<h1>TopCasaFina Arquitetura</h1>
+	<header class="header-site">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<button type="button" id="btn-navbar" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">TopCasaFina Arquitetura</a>
+			</div>
+			<div class="container collapse navbar-collapse" id="menu">
+				<ul class="nav navbar-nav">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#sobre-nos">Sobre Nós</a></li>
+					<li><a href="#projetos">Nossos Projetos</a></li>
+					<li><a href="#depoimentos">Depoimentos</a></li>
+					<li><a href="#video">Vídeo</a></li>
+					<li><a href="#contato">Contato</a></li>
+				</ul>
+			</div>
+		</nav>
+		<section class="container text-center" id="banner-home">
+			<h1 class="titulo-home">TopCasaFina Arquitetura</h1>
 			<p>Projetando a casa dos sonhos desde 2000 A.C</p>
 			<a href="#contato" class="btn btn-primary btn-lg">Contate-nos agora</a>
 		</section>
+	</header>
 
-		<section class="container" id="sobre-nos">
+	<main class="corpo-site">
+
+
+		<div class="container">
 			<h2>Sobre Nós</h2>
-			<img class="img-responsive" src="img/empresa.jpg" alt="Arquitetos trabalhando">
-		</section>
 
-		<section class="panel-group container" id="painel-sobre">
-			<article class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title" data-toggle="collapse" data-target="#primeiro-paragrafo" data-parent="#painel-sobre"
-						role="button" aria-expanded="true" aria-controls="collapseOne">
-						Desde 1935
-					</h3>
-				</div>
-				<div class="collapse in" id="primeiro-paragrafo">
-					<div class="panel-body">
-						<p>Desde 1935 trazendo casas, mansões e prédios lindos para o mundo.</p>
-					</div>
-				</div>
-			</article>
-			<article class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title" data-toggle="collapse" data-target="#segundo-paragrafo" data-parent="#painel-sobre"
-						role="button" aria-expanded="true" aria-controls="collapseOne">
-						Preços acessíveis
-					</h3>
-				</div>
-				<div class="collapse" id="segundo-paragrafo">
-					<div class="panel-body">
-						<p>Preços a partir de R$ 1000,00.</p>
-					</div>
-				</div>
-			</article>
-			<article class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title" data-toggle="collapse" data-target="#terceiro-paragrafo" data-parent="#painel-sobre"
-						role="button" aria-expanded="true" aria-controls="collapseOne">
-						Alegria em colaborar para um mundo mais bonito
-					</h3>
-				</div>
-				<div class="collapse" id="terceiro-paragrafo">
-					<div class="panel-body">
-						<p>Trazendo alegria para a vida das pessoas que tem dinheiro para gastar.</p>
-					</div>
-				</div>
-			</article>
-		</section>
+			<div class="row">
+				<section class="col-sm-6" id="sobre-nos">
+					<img class="img-responsive" src="img/empresa.jpg" alt="Arquitetos trabalhando">
+				</section>
 
-		<section class="banner-300 text-center">
+				<section class="panel-group col-sm-6" id="painel-sobre">
+					<article class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title" data-toggle="collapse" data-target="#primeiro-paragrafo"
+								data-parent="#painel-sobre" role="button" aria-expanded="true" aria-controls="collapseOne">
+								Desde 1935
+							</h3>
+						</div>
+						<div class="collapse in" id="primeiro-paragrafo">
+							<div class="panel-body">
+								<p>Desde 1935 trazendo casas, mansões e prédios lindos para o mundo.</p>
+							</div>
+						</div>
+					</article>
+					<article class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title" data-toggle="collapse" data-target="#segundo-paragrafo"
+								data-parent="#painel-sobre" role="button" aria-expanded="true" aria-controls="collapseOne">
+								Preços acessíveis
+							</h3>
+						</div>
+						<div class="collapse" id="segundo-paragrafo">
+							<div class="panel-body">
+								<p>Preços a partir de R$ 1000,00.</p>
+							</div>
+						</div>
+					</article>
+					<article class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title" data-toggle="collapse" data-target="#terceiro-paragrafo"
+								data-parent="#painel-sobre" role="button" aria-expanded="true" aria-controls="collapseOne">
+								Alegria em colaborar para um mundo mais bonito
+							</h3>
+						</div>
+						<div class="collapse" id="terceiro-paragrafo">
+							<div class="panel-body">
+								<p>Trazendo alegria para a vida das pessoas que tem dinheiro para gastar.</p>
+							</div>
+						</div>
+					</article>
+				</section>
+			</div>
+		</div>
+
+		<section class="banner-300 text-center clearfix">
 			<div class="jumbotron">
 				<h3>
 					Mais de 300 prêmios em design e em conforto.
@@ -78,45 +107,56 @@
 			</div>
 		</section>
 
-		<section class="projetos container">
-			<figure class="thumbnail">
-				<img src="img/projetos/casa-castelo.png" alt="Foto da casa castelo" class="img-responsive">
-				<figcaption class="caption">
-					<h3>Casa Castelo</h3>
-					<p>A Casa Castelo é o último lançamento da TopCasaFina Arquitetura, feita para um monge.</p>
-				</figcaption>
+		<section class="container" id="projetos">
+			<h2>Nossos projetos</h2>
+			<div class="col-xs-12 col-sm-6 col-lg-3 col-md-4">
+				<figure class="thumbnail">
+					<img src="img/projetos/casa-castelo.png" alt="Foto da casa castelo" class="img-responsive">
+					<figcaption class="caption">
+						<h3>Casa Castelo</h3>
+						<p>A Casa Castelo é o último lançamento da TopCasaFina Arquitetura, feita para um monge.</p>
+					</figcaption>
+			</div>
 			</figure>
-			<figure class="thumbnail">
-				<img src="img/projetos/casa-lago.png" alt="Foto da casa Lago" class="img-responsive">
-				<figcaption class="caption">
-					<h3>Casa Lago</h3>
-					<p>A Casa do Lago foi lar de inúmeras pessoas que conheciam o presidente da época.</p>
-				</figcaption>
-			</figure>
-			<figure class="thumbnail">
-				<img src="img/projetos/mercado-marapira.png" alt="Foto do mercado marapira" class="img-responsive">
-				<figcaption class="caption">
-					<h3>Mercado Marapira</h3>
-					<p>O mercado Marapira foi projetado nos mínimos detalhes na arquitetura baseada em frutas.</p>
-				</figcaption>
-			</figure>
-			<figure class="thumbnail">
-				<img src="img/projetos/palacio-dionisio.png" alt="Foto do palácio Dionísio" class="img-responsive">
-				<figcaption class="caption">
-					<h3>Palácio Dionísio</h3>
-					<p>O palácio Dionísio foi eleito pela revista 'Grandes palácios' como o palácio mais lindo do mundo.</p>
-				</figcaption>
-			</figure>
-			<figure class="thumbnail">
-				<img src="img/projetos/residencia-ludi.png" alt="Foto da residencia Ludi" class="img-responsive">
-				<figcaption class="caption">
-					<h3>Residência Ludi</h3>
-					<p>A residência Ludi foi projetada para ser a mais bela casa de São Paulo pela revista Housing.</p>
-				</figcaption>
-			</figure>
+			<div class="col-xs-12 col-sm-6 col-lg-3 col-md-4">
+				<figure class="thumbnail">
+					<img src="img/projetos/casa-lago.png" alt="Foto da casa Lago" class="img-responsive">
+					<figcaption class="caption">
+						<h3>Casa Lago</h3>
+						<p>A Casa do Lago foi lar de inúmeras pessoas que conheciam o presidente da época.</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-lg-3 col-md-4">
+				<figure class="thumbnail">
+					<img src="img/projetos/mercado-marapira.png" alt="Foto do mercado marapira" class="img-responsive">
+					<figcaption class="caption">
+						<h3>Mercado Marapira</h3>
+						<p>O mercado Marapira foi projetado nos mínimos detalhes na arquitetura baseada em frutas.</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-lg-3 col-md-4">
+				<figure class="thumbnail">
+					<img src="img/projetos/palacio-dionisio.png" alt="Foto do palácio Dionísio" class="img-responsive">
+					<figcaption class="caption">
+						<h3>Palácio Dionísio</h3>
+						<p>O palácio Dionísio foi eleito pela revista 'Grandes palácios' como o palácio mais lindo do mundo.</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-lg-3 col-md-4">
+				<figure class="thumbnail">
+					<img src="img/projetos/residencia-ludi.png" alt="Foto da residencia Ludi" class="img-responsive">
+					<figcaption class="caption">
+						<h3>Residência Ludi</h3>
+						<p>A residência Ludi foi projetada para ser a mais bela casa de São Paulo pela revista Housing.</p>
+					</figcaption>
+				</figure>
+			</div>
 		</section>
 
-		<section class="depoimentos">
+		<section id="depoimentos" class="container">
 			<h3 class="titulo-depoimentos text-center">Depoimentos de clientes</h3>
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
@@ -137,14 +177,14 @@
 						</figcaption>
 					</figure>
 					<figure class="item">
-						<img src="img/depoimentos/projetos1.png" alt="foto castelo inglês">
+						<img src="img/depoimentos/projetos1.png" class="img-responsive" alt="foto castelo inglês">
 						<figcaption class="carousel-caption">
 							<h3>Fernando Stafaneni</h3>
 							<p>Excelente trabalho.</p>
 						</figcaption>
 					</figure>
 					<figure class="item">
-						<img src="img/depoimentos/projetos2.png" alt="foto castelo Búlgaro">
+						<img src="img/depoimentos/projetos2.png" class="img-responsive" alt="foto castelo Búlgaro">
 						<figcaption class="carousel-caption">
 							<h3>Caio Sauzas</h3>
 							<p>Gostei, competência em primeiro lugar.</p>
@@ -164,7 +204,7 @@
 			</div>
 		</section>
 
-		<section class="intitucional container">
+		<section class="container" id="video">
 			<h3>Vídeo Institucional</h3>
 			<div class="embed-responsive embed-responsive-16by9">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/UeMkXvmk68Q" frameborder="0"
@@ -172,7 +212,7 @@
 			</div>
 		</section>
 
-		<section class="contato container">
+		<section class="container" id="contato">
 			<h3>Contato</h3>
 			<h4>Entre em contato conosco</h4>
 
@@ -189,7 +229,7 @@
 			</div>
 			<div class="form-inline">
 				<div class="form-group">
-					<div class="radio-tipo">
+					<div class="radio-tipo col-xs-6">
 						<div class="radio">
 							<label>
 								<input type="radio" name="tipo-pessoa" value="fisica" checked>
@@ -203,14 +243,16 @@
 							</label>
 						</div>
 					</div>
-					<select class="form-control tipo-contrucao">
-						<option disabled selected>Tipo contrução</option>
-						<option>Casa</option>
-						<option>Apartamento</option>
-						<option>Mansão</option>
-						<option>Castelo</option>
-					</select>
-					<button type="submit" class="btn btn-primary">Enviar</button>
+					<div class="select-tipo col-xs-6">
+						<select class="form-control tipo-contrucao">
+							<option disabled selected>Tipo contrução</option>
+							<option>Casa</option>
+							<option>Apartamento</option>
+							<option>Mansão</option>
+							<option>Castelo</option>
+						</select>
+						<button type="submit" class="btn btn-primary">Enviar</button>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -230,6 +272,7 @@
 
 	<script src="JQuery.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/navbar-animation.fix.js"></script>
 </body>
 
 </html>
