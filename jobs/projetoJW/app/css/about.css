@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Chilanka&display=swap');
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    font-family: 'Chilanka', cursive;
+    text-align: center;
+}
+
+.timer-img {
+    width: 50px;
+}
+
+.container a {
+    color: lightskyblue;
+    text-decoration: none;
+}

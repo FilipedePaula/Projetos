@@ -1,0 +1,49 @@
+body {
+    overflow: hidden;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: #2c2c2c;
+}
+
+.container {
+    margin-top: 1em;
+    padding: .5em 0;
+    background: lightskyblue;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.timer-full {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer {
+    font-size: 4em;
+    padding: .2em 0;
+    align-items: baseline;
+}
+
+.timer-controls {
+    display: flex;
+}
+
+.timer-controls button {
+    border: none;
+    cursor: pointer;
+}
+
+.timer-controls li:nth-child(n + 1) {
+    margin-left: 1em;
+}
+
+.timer-controls img {
+    width: 70px;
+    opacity: .8;
+    background: #ffffff;
+}
+
+.timer-controls img:hover {
+    opacity: 1;
+}
