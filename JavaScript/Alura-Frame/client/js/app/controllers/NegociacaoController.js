@@ -3,29 +3,28 @@ class NegociacaoController {
     constructor() {
 
         let $ = document.querySelector.bind(document);
-        let self = this;
 
         this._data = $('#data');
         this._quantidade = $('#quantidade');
         this._valor = $('#valor');
 
-        this._listaNegociacoes = new Proxy(new ListaNegociacoes(), {
-            get(target, prop, receiver) {
-                if (['adiciona', 'esvazia'].includes(prop) && typeof (target[prop] == typeof (Function))) {
-                    return function () {
-                        Reflect.apply(target[prop], target, arguments);
-                        self._negociacoesView.update(target);
-                    }
-                }
-
-                return Reflect.get(target, prop, receiver);
-            }
-        });
+        this._listaNegociacoes = ProxyFactory.create(
+            new ListaNegociacoes(),
+            ['adiciona', 'esvazia'],
+            model => this._negociacoesView.update(model)
+        );
 
 
         this._negociacoesView = new NegociacoesView($('#negociacoesView'));
         this._negociacoesView.update(this._listaNegociacoes);
-        this._mensagem = new Mensagem();
+
+        this._mensagem = ProxyFactory.create(
+            new Mensagem(),
+            ['texto'],
+            model => this._mensagemView.update(model)
+        );
+
+
         this._mensagemView = new MensagemView($('#mensagem-negociacao'));
         this._mensagemView.update(this._mensagem);
     }
@@ -35,7 +34,6 @@ class NegociacaoController {
         event.preventDefault();
         this._listaNegociacoes.adiciona(this._criaNegociacao());
         this._mensagem.texto = 'Negociação adicionada com sucesso!';
-        this._mensagemView.update(this._mensagem);
         this._limpaForm();
     }
 
@@ -51,7 +49,6 @@ class NegociacaoController {
     apagar() {
         this._listaNegociacoes.esvazia();
         this._mensagem.texto = "Negociações apagadas com sucesso";
-        this._mensagemView.update(this._mensagem);
     }
 
     _limpaForm() {
