@@ -4,11 +4,6 @@ import "./css/side-menu.css";
 import AutorBox from "./Autor";
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = { lista: [] };
-  }
-
   render() {
     return (
       <div id="layout">
