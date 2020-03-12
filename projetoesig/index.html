@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Esig</title>
+</head>
+
+<body class="bg-dark">
+
+  <div class="container">
+    <header>
+      <div class="pos-f-t bg-light">
+        <nav class="navbar navbar-dark bg-ligth border d-flex justify-content-between">
+          <div>
+            <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#sidebar-wrapper"
+              aria-controls="sidebar-wrapper" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <ion-icon name="finger-print-outline" size="large" class="align-middle ml-2"></ion-icon>
+          </div>
+          <div class="d-flex">
+            <div class="name-settings d-flex flex-column">
+              <a href="#">Filipe de Paula</a>
+              <a href="#">Account Settings</a>
+            </div>
+            <a href="#" class="align-middle ml-2">
+              <ion-icon name="person-circle-outline" size='large' class="account-photo"></ion-icon>
+            </a>
+          </div>
+      </div>
+      </nav>
+    </header>
+
+    <div class="full-body bg-white p-0 col-12">
+      <div class="p-0 side-menu">
+        <div class="bg-light sidebar-toggle border" id="sidebar-wrapper">
+          <div class="list-group list-group-flush d-flex align-itens-center">
+            <a href="#" class="list-group-item list-group-item-action bg-light">
+              <ion-icon name="search-sharp" size='large'></ion-icon>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">
+              <ion-icon name="home-sharp" size='large'></ion-icon>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">
+              <ion-icon name="document-text-sharp" size='large'></ion-icon>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">
+              <ion-icon name="bar-chart-sharp" size='large'></ion-icon>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">
+              <ion-icon name="push-sharp" size='large'></ion-icon>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">
+              <ion-icon name="image-sharp" size='large'></ion-icon>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">
+              <ion-icon name="calendar-sharp" size='large'></ion-icon>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">
+              <ion-icon name="image-sharp" size='large'></ion-icon>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">
+              <ion-icon name="settings-sharp" size='large'></ion-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="offset-2 col-10">
+        <section class="statistic-cards d-flex mt-4 p-0 col-12">
+          <div class="row justify-content-between col-12 p-0">
+            <div class="card statistic-cards-element mb-2">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="cards-text">
+                  <h5 class="card-title mb-0">Total Sales</h5>
+                  <small class="muted-text">21.324</small>
+                </div>
+                <ion-icon name="cash-outline" size='large'></ion-icon>
+              </div>
+            </div>
+            <div class="card statistic-cards-element mb-2">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="cards-text">
+                  <h5 class="card-title mb-0">Total Income</h5>
+                  <small class="muted-text">211.453</small>
+                </div>
+                <ion-icon name="pricetags-outline" class='float-right' size='large'></ion-icon>
+              </div>
+            </div>
+            <div class="card statistic-cards-element mb-2">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="cards-text">
+                  <h5 class="card-title mb-0">Total Views</h5>
+                  <small class="muted-text">65.223</small>
+                </div>
+                <ion-icon name="tv-outline" class='float-right' size='large'></ion-icon>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="charts d-flex col-12 p-0">
+          <div class="row col-12 mt-4 p-0 justify-content-between">
+            <div class="card card-chart chart-inline">
+              <div class="card-body">
+                <h5 class="card-title border-bottom">Sales performance</h5>
+                <canvas id="lineChart" width="528" height="264"></canvas>
+              </div>
+            </div>
+            <div class="card card-chart chart-doughnut">
+              <div class="card-body">
+                <h5 class="card-title border-bottom">Top Categories</h5>
+                <canvas id="doughnutChart" width="400" height="400"></canvas>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="table d-flex col-12 p-0">
+          <div class="row col-12 mt-4 p-0">
+            <h5>Recent Customers</h5>
+            <table class="table table-striped border table-data">
+              <tbody>
+                <tr>
+                  <td class="align-middle">Jerry Mattedi</td>
+                  <td>
+                    <p class="mb-0">12 aug 2020</p>
+                    <p class="mb-0">joined</p>
+                  </td>
+                  <td>
+                    <p class="mb-0">251-254-4545</p>
+                    <p class="mb-0">Phone Number</p>
+                  </td>
+                  <td>
+                    <p class="mb-0">New york</p>
+                    <p class="mb-0">Location</p>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-secondary">options</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-primary">Details</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align-middle">Jerry Mattedi</td>
+                  <td>
+                    <p class="mb-0">12 aug 2020</p>
+                    <p class="mb-0">joined</p>
+                  </td>
+                  <td>
+                    <p class="mb-0">251-254-4545</p>
+                    <p class="mb-0">Phone Number</p>
+                  </td>
+                  <td>
+                    <p class="mb-0">New york</p>
+                    <p class="mb-0">Location</p>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-secondary">options</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-primary">Details</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align-middle">Jerry Mattedi</td>
+                  <td>
+                    <p class="mb-0">12 aug 2020</p>
+                    <p class="mb-0">joined</p>
+                  </td>
+                  <td>
+                    <p class="mb-0">251-254-4545</p>
+                    <p class="mb-0">Phone Number</p>
+                  </td>
+                  <td>
+                    <p class="mb-0">New york</p>
+                    <p class="mb-0">Location</p>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-secondary">options</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-primary">Details</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align-middle">Jerry Mattedi</td>
+                  <td>
+                    <p class="mb-0">12 aug 2020</p>
+                    <p class="mb-0">joined</p>
+                  </td>
+                  <td>
+                    <p class="mb-0">251-254-4545</p>
+                    <p class="mb-0">Phone Number</p>
+                  </td>
+                  <td>
+                    <p class="mb-0">New york</p>
+                    <p class="mb-0">Location</p>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-secondary">options</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-primary">Details</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align-middle">Jerry Mattedi</td>
+                  <td>
+                    <p class="mb-0">12 aug 2020</p>
+                    <p class="mb-0">joined</p>
+                  </td>
+                  <td>
+                    <p class="mb-0">251-254-4545</p>
+                    <p class="mb-0">Phone Number</p>
+                  </td>
+                  <td>
+                    <p class="mb-0">New york</p>
+                    <p class="mb-0">Location</p>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-secondary">options</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-primary">Details</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer class="page-footer border bg-light">
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script src="js/salesPerformance.js"></script>
+  <script src="js/topCategories.js"></script>
+</body>
+
+</html>
