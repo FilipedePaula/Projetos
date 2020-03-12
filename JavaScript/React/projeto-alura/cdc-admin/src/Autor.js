@@ -3,11 +3,16 @@ import $ from "jquery";
 import InputCustomizado from "./components/InputCustomizado";
 import BotaoSubmitcustomizado from "./components/BotaoSubmitCustomizado";
 import PubSub from "pubsub-js";
+import TratadorErros from "./TratadorErros";
 
 class FormularioAutor extends Component {
   constructor() {
     super();
-    this.state = { nome: "", email: "", senha: "" };
+    this.state = {
+      nome: "",
+      email: "",
+      senha: ""
+    };
 
     this.enviaForm = this.enviaForm.bind(this);
     this.setNome = this.setNome.bind(this);
@@ -16,15 +21,21 @@ class FormularioAutor extends Component {
   }
 
   setNome(evento) {
-    this.setState({ nome: evento.target.value });
+    this.setState({
+      nome: evento.target.value
+    });
   }
 
   setEmail(evento) {
-    this.setState({ email: evento.target.value });
+    this.setState({
+      email: evento.target.value
+    });
   }
 
   setSenha(evento) {
-    this.setState({ senha: evento.target.value });
+    this.setState({
+      senha: evento.target.value
+    });
   }
 
   enviaForm(evento) {
@@ -42,9 +53,19 @@ class FormularioAutor extends Component {
       }),
       success: function(novaListagem) {
         PubSub.publish("atualiza-lista-autores", novaListagem);
-      },
+        this.state({
+          nome: "",
+          email: "",
+          senha: ""
+        });
+      }.bind(this),
       error: function(resposta) {
-        console.log(`erro: ${resposta}`);
+        if (resposta === 400) {
+          new TratadorErros().publicaErros(resposta.responseJSON);
+        }
+      },
+      beforeSend: function() {
+        PubSub.publish("limpa-erros", {});
       }
     });
   }
@@ -82,7 +103,7 @@ class FormularioAutor extends Component {
             label="Senha"
           />
           <BotaoSubmitcustomizado label="Gravar" />
-        </form>
+        </form>{" "}
       </div>
     );
   }
@@ -95,21 +116,20 @@ class TabelaAutores extends Component {
         <table className="pure-table">
           <thead>
             <tr>
-              <th>Nome</th>
-              <th>email</th>
-            </tr>
-          </thead>
+              <th> Nome </th> <th> email </th>{" "}
+            </tr>{" "}
+          </thead>{" "}
           <tbody>
+            {" "}
             {this.props.lista.map(autor => {
               return (
                 <tr key={autor.id}>
-                  <td>{autor.nome}</td>
-                  <td>{autor.email}</td>
+                  <td> {autor.nome} </td> <td> {autor.email} </td>{" "}
                 </tr>
               );
-            })}
-          </tbody>
-        </table>
+            })}{" "}
+          </tbody>{" "}
+        </table>{" "}
       </div>
     );
   }
@@ -118,7 +138,9 @@ class TabelaAutores extends Component {
 export default class AutorBox extends Component {
   constructor() {
     super();
-    this.state = { lista: [] };
+    this.state = {
+      lista: []
+    };
   }
 
   componentDidMount() {
@@ -126,14 +148,18 @@ export default class AutorBox extends Component {
       url: "https://cdc-react.herokuapp.com/api/autores",
       dataType: "json",
       success: function(resposta) {
-        this.setState({ lista: resposta });
+        this.setState({
+          lista: resposta
+        });
       }.bind(this)
     });
 
     PubSub.subscribe(
       "atualiza-lista-autores",
       function(topico, novaListagem) {
-        this.setState({ lista: novaListagem });
+        this.setState({
+          lista: novaListagem
+        });
       }.bind(this)
     );
   }
@@ -141,8 +167,8 @@ export default class AutorBox extends Component {
   render() {
     return (
       <div>
-        <FormularioAutor callbackAtualizaListagem={this.atualizaListagem} />
-        <TabelaAutores lista={this.state.lista} />
+        <FormularioAutor callbackAtualizaListagem={this.atualizaListagem} />{" "}
+        <TabelaAutores lista={this.state.lista} />{" "}
       </div>
     );
   }
